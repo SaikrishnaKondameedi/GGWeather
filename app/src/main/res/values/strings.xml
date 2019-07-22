@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GGWeather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slot_2">Slot 2</string>
+    <string name="textview">TextView</string>
+    <string name="slot_8">Slot 8</string>
+    <string name="slot_7">Slot 7</string>
+    <string name="slot_6">Slot 6</string>
+    <string name="slot_5">Slot 5</string>
+    <string name="slot_1">Slot 1</string>
+    <string name="slot_3">Slot 3</string>
+    <string name="slot_4">Slot 4</string>
+</resources>
