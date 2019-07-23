@@ -10,11 +10,13 @@ public class Main {
     @Expose
     private Double temp;
 
-    public Double getTemp() {
+    public Double getTemp()
+    {
         return temp;
     }
 
-    public void setTemp(Double temp) {
+    public void setTemp(Double temp)
+    {
         this.temp = temp;
     }
 
