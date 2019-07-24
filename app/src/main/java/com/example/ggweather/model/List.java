@@ -1,13 +1,17 @@
 
 package com.example.ggweather.model;
 
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.Calendar;
 
 
 public class
-List {
+List implements Serializable {
 
     @SerializedName("dt")
     @Expose

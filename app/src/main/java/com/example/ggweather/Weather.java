@@ -13,21 +13,12 @@ public interface Weather
 {
 
     @GET("data/2.5/weather?")
-    Call<WeatherData> getCurrentWeatherData(@Query("id") String id, @Query("appid") String app_id);
+    Call<WeatherData> getCurrentWeatherData(@Query("id") String id, @Query("appid") String app_id, @Query("units") String units);
 
     @GET("data/2.5/forecast?")
-    Call<WeatherForecastData> getCurrentForecastData(@Query("id") String id, @Query("appid") String app_id);
+    Call<WeatherForecastData> getCurrentForecastData(@Query("id") String id, @Query("appid") String app_id, @Query("units") String units);
 
 }
 
 
-/*
-
-IopenweatherMap = Weather
-Weather result = retro
-WeatherForecastResult = CityCountry.
-
-
-
-*/
 

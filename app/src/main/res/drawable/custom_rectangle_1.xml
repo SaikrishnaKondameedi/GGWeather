@@ -6,7 +6,7 @@
         android:color="#FFFFFF" />
 
     <solid
-        android:color="#99FF99"
+        android:color="#6452F0"
         />
 
     // Reduce the corner radius value

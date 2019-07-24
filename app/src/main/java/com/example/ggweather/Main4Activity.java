@@ -19,7 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main4Activity extends AppCompatActivity {
 
     TextView Location11;
     TextView weatherData11;
@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main2 );
+        setContentView(R.layout.activity_main4);
 
         Location11 = (TextView) findViewById( R.id.textView32 );
         weatherData11 = (TextView) findViewById( R.id.textView33 );
@@ -62,28 +62,28 @@ public class Main2Activity extends AppCompatActivity {
         Location11.setText( message2 );
 
         final ArrayList<List> forecastList1 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotOne.setText(forecastList1.get( 0 ).getMain().getTemp().toString() + "\u2103");
+        SlotOne.setText(forecastList1.get( 16 ).getMain().getTemp().toString() + "\u2103");
 
         final ArrayList<List> forecastList2 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotTwo.setText(forecastList2.get( 1 ).getMain().getTemp().toString() + "\u2103");
+        SlotTwo.setText(forecastList2.get( 17 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList3 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotThree.setText(forecastList3.get( 2 ).getMain().getTemp().toString() + "\u2103");
+        SlotThree.setText(forecastList3.get( 18 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList4 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotFour.setText(forecastList4.get( 3 ).getMain().getTemp().toString() + "\u2103");
+        SlotFour.setText(forecastList4.get( 19 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList5 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotFive.setText(forecastList5.get( 4 ).getMain().getTemp().toString() + "\u2103");
+        SlotFive.setText(forecastList5.get( 20 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList6 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotSix.setText(forecastList6.get( 5 ).getMain().getTemp().toString() + "\u2103");
+        SlotSix.setText(forecastList6.get( 21 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList7 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" ) ;
-        SlotSeven.setText(forecastList7.get( 6 ).getMain().getTemp().toString() + "\u2103");
+        SlotSeven.setText(forecastList7.get( 22 ).getMain().getTemp().toString() + "\u2103");
 
         ArrayList<List> forecastList8 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotEight.setText(forecastList8.get( 7 ).getMain().getTemp().toString() + "\u2103");
+        SlotEight.setText(forecastList8.get( 23 ).getMain().getTemp().toString() + "\u2103");
 
 
         SlotOne.setOnClickListener( new View.OnClickListener() {
@@ -141,9 +141,6 @@ public class Main2Activity extends AppCompatActivity {
                 weatherData11.setText(SlotEight.getText().toString());
             }
         } );
-
-
-
 
     }
 

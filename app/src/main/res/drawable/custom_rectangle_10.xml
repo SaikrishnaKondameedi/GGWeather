@@ -3,10 +3,10 @@
     android:shape="rectangle">
     <stroke
         android:width="4dp"
-        android:color="#FFFFFF" />
+        android:color="#7F76FF" />
 
     <solid
-        android:color="#F7F6FF"
+        android:color="#FFFFFF"
         />
 
     // Reduce the corner radius value
