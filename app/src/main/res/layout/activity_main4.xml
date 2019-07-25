@@ -125,7 +125,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_rectangle"
-            android:gravity="center_horizontal"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
 

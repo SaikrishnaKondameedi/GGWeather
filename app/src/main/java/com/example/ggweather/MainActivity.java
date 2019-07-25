@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                                   WeatherData weatherResponse = response.body();
                                   assert weatherResponse != null;
 
-                                  String stringBuilder = weatherResponse.getMain().getTemp().toString() + " \u2103" + "\n";
+                                  String stringBuilder = weatherResponse.getMain().getTemp().intValue() + " \u2103" + "\n";
                                   weatherData.setText( stringBuilder );
 
                                   String string1 = weatherResponse.getName() + " , " + "India";
@@ -153,19 +153,19 @@ public class MainActivity extends AppCompatActivity {
                     weatherForecastData = response.body();
                     assert weatherForecastData != null;
 
-                    String stringBuilder1 = weatherForecastData.getList().get( 0 ).getMain().getTemp().toString() + " \u2103" + "\n";
+                    String stringBuilder1 = weatherForecastData.getList().get( 0 ).getMain().getTemp().intValue() + " \u2103" + "\n";
                     Day1.setText( stringBuilder1 );
 
-                    String stringBuilder2 = weatherForecastData.getList().get( 8 ).getMain().getTemp().toString() + " \u2103" + "\n";
+                    String stringBuilder2 = weatherForecastData.getList().get( 8 ).getMain().getTemp().intValue() + " \u2103" + "\n";
                     Day2.setText( stringBuilder2 );
 
-                    String stringBuilder3 = weatherForecastData.getList().get( 16 ).getMain().getTemp().toString() + " \u2103" + "\n";
+                    String stringBuilder3 = weatherForecastData.getList().get( 16 ).getMain().getTemp().intValue() + " \u2103" + "\n";
                     Day3.setText( stringBuilder3 );
 
-                    String stringBuilder4 = weatherForecastData.getList().get( 24 ).getMain().getTemp().toString() + " \u2103" + "\n";
+                    String stringBuilder4 = weatherForecastData.getList().get( 24 ).getMain().getTemp().intValue() + " \u2103" + "\n";
                     Day4.setText( stringBuilder4 );
 
-                    String stringBuilder5 = weatherForecastData.getList().get( 32 ).getMain().getTemp().toString() + " \u2103" + "\n";
+                    String stringBuilder5 = weatherForecastData.getList().get( 32 ).getMain().getTemp().intValue() + " \u2103" + "\n";
                     Day5.setText( stringBuilder5 );
 
                 }
@@ -187,6 +187,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra( "WEATHERVALUE", value );
         intent.putExtra( "LOCATIONVALUE", location );
         intent.putExtra( "HOURLY_DATA", data );
+        intent.putExtra( "GET_DT", data );
+
         startActivity(intent);
     }
 

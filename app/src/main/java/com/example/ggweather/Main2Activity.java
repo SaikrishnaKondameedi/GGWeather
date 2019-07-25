@@ -1,12 +1,14 @@
 package com.example.ggweather;
 
 import java.io.Serializable;
+import java.sql.Time;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,6 +33,8 @@ public class Main2Activity extends AppCompatActivity {
     TextView SlotSix;
     TextView SlotSeven;
     TextView SlotEight;
+    TextView Time1;
+
 
 
     public static String BaseURL = "http://api.openweathermap.org/";
@@ -53,6 +57,9 @@ public class Main2Activity extends AppCompatActivity {
         SlotSix = (TextView) findViewById( R.id.textView120 );
         SlotSeven = (TextView) findViewById( R.id.textView130 );
         SlotEight = (TextView) findViewById( R.id.textView140 );
+        Time1 = (TextView) findViewById(R.id.textView2010);
+
+
 
 
         Intent intent = getIntent();
@@ -62,28 +69,34 @@ public class Main2Activity extends AppCompatActivity {
         Location11.setText( message2 );
 
         final ArrayList<List> forecastList1 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotOne.setText(forecastList1.get( 0 ).getMain().getTemp().toString() + "\u2103");
+        SlotOne.setText(forecastList1.get( 0 ).getMain().getTemp().intValue() + "\u2103");
 
         final ArrayList<List> forecastList2 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotTwo.setText(forecastList2.get( 1 ).getMain().getTemp().toString() + "\u2103");
+        SlotTwo.setText(forecastList2.get( 1 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList3 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotThree.setText(forecastList3.get( 2 ).getMain().getTemp().toString() + "\u2103");
+        SlotThree.setText(forecastList3.get( 2 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList4 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotFour.setText(forecastList4.get( 3 ).getMain().getTemp().toString() + "\u2103");
+        SlotFour.setText(forecastList4.get( 3 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList5 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotFive.setText(forecastList5.get( 4 ).getMain().getTemp().toString() + "\u2103");
+        SlotFive.setText(forecastList5.get( 4 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList6 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotSix.setText(forecastList6.get( 5 ).getMain().getTemp().toString() + "\u2103");
+        SlotSix.setText(forecastList6.get( 5 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList7 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" ) ;
-        SlotSeven.setText(forecastList7.get( 6 ).getMain().getTemp().toString() + "\u2103");
+        SlotSeven.setText(forecastList7.get( 6 ).getMain().getTemp().intValue() + "\u2103");
 
         ArrayList<List> forecastList8 = (ArrayList<List>) getIntent().getSerializableExtra( "HOURLY_DATA" );
-        SlotEight.setText(forecastList8.get( 7 ).getMain().getTemp().toString() + "\u2103");
+        SlotEight.setText(forecastList8.get( 7 ).getMain().getTemp().intValue() + "\u2103");
+
+       //ArrayList<List> getdt1 = (ArrayList<List>) getIntent().getSerializableExtra( "GET_DT" );
+       //String time1 = DateUtils.formatDateTime(this, getdt1.get(0).getDt().intValue(), DateUtils.FORMAT_SHOW_TIME);
+       //Time1.setText(time1);
+
+
 
 
         SlotOne.setOnClickListener( new View.OnClickListener() {
@@ -141,11 +154,5 @@ public class Main2Activity extends AppCompatActivity {
                 weatherData11.setText(SlotEight.getText().toString());
             }
         } );
-
-
-
-
     }
-
-
 }

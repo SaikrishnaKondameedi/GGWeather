@@ -16,9 +16,11 @@ List implements Serializable {
     @SerializedName("dt")
     @Expose
     private Integer dt;
+
     @SerializedName("main")
     @Expose
     private Main main;
+
     @SerializedName("rain")
     @Expose
     private Rain rain;
@@ -28,7 +30,7 @@ List implements Serializable {
     }
 
     public void setDt(Integer dt) {
-        this.dt = dt;
+        this.dt= dt;
     }
 
     public Main getMain() {
